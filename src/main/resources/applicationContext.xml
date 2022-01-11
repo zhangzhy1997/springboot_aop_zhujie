@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p" xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.2.xsd ">
+    <!-- 1.开启注解AOP  这个是 开启事物注解权限，引入了三个jar包  aspectjweaver.jar aspectjrt.jar aspectj.jar  aopalliance.jar。-->
+    <aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+    <!-- 2.配置扫描的包 在xml配置了这个标签后，spring可以自动去扫描base-pack下面或者子包下面的java文件，
+    如果扫描到有@Component @Controller@Service等这些注解的类，则把这些类注册为bean。-->
+    <context:component-scan base-package="com.example"></context:component-scan>
+</beans>
